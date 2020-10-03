@@ -190,7 +190,7 @@ Much like ``SimpleMotorFeedforward`` can be used to generate feedforward voltage
 
       .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/StateSpaceFlywheel/cpp/Robot.cpp
          :language: cpp
-         :lines: 59-79
+         :lines: 59-73
          :linenos:
          :lineno-start: 59
 
@@ -219,9 +219,9 @@ LinearSystemLoop combines our system, controller, and observer that we created e
 
       .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/StateSpaceFlywheel/cpp/Robot.cpp
          :language: cpp
-         :lines: 80-84
+         :lines: 75-78
          :linenos:
-         :lineno-start: 80
+         :lineno-start: 75
 
 Once we have our ``LinearSystemLoop``, the only thing left to do is actually run it. To do that, we'll periodically update our Kalman filter with our new encoder velocity measurements and apply new voltage commands to it. To do that, we first set the :term:`reference`, then ``correct`` with the current flywheel speed, ``predict`` the Kalman filter into the next timestep, and apply the inputs generated using ``getU``.
 
@@ -245,6 +245,6 @@ Once we have our ``LinearSystemLoop``, the only thing left to do is actually run
 
       .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/master/wpilibcExamples/src/main/cpp/examples/StateSpaceFlywheel/cpp/Robot.cpp
          :language: cpp
-         :lines: 101-121
+         :lines: 96-119
          :linenos:
-         :lineno-start: 102
+         :lineno-start: 96
